@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from apps.users.models import User
-# from apps.todo.serializers import ToDoSerializer
+from apps.todo.serializers import ToDoSerializer
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -11,7 +11,7 @@ class UserSerializer(serializers.ModelSerializer):
                   'age', 'phone_number')
         
 class UserDetailSerializer(serializers.ModelSerializer):
-    # users_todo = ToDoSerializer(many=True, read_only=True)
+    users_todo = ToDoSerializer(many=True, read_only=True)
     class Meta:
         model = User 
         fields = ('id', 'username', 'email', 'first_name', 'last_name',
