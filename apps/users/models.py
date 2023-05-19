@@ -6,11 +6,11 @@ class User(AbstractUser):
     phone_number = models.CharField(
         max_length=200,
         verbose_name="Телефонный номер",
-        help_text="Например: +996777111777"
+        help_text="Например: +996550435343"
     )
     age = models.PositiveSmallIntegerField(
         verbose_name="Возраст",
-        help_text="Например: 18",
+        help_text="Например: 20",
         blank=True, null=True
     )
 
